@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="tip.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container_innen">
+        <div class="title">
+          <h1 class="tip_title">Tip Calculator</h1>
+        </div>
+        <form id="tip_form">
+          <!-- muss in einem Formfield sein damit es funktioniert -->
+          <div class="net_price">
+            <!-- eingabe des betrages wie viel die Rechnung beträgt -->
+            <input
+              type="number"
+              placeholder="Billing amount"
+              id="billingAmount"
+              value="0"
+              required
+            />
+            <span>€</span>
+          </div>
+          <div class="tip_precent">
+            <!-- erstellen eines Sliders um den Prozentsatz für das Trinkged zu bestimmen -->
+            <input
+              type="range"
+              class="slider"
+              id="sliderRange"
+              min="0"
+              value="8"
+            />
+            <p><b> TIP :</b> <span id="tipAmount"></span></p>
+          </div>
+          <div class="tip_result">
+            <p class="tipResultTitel">Result</p>
+            <p><b>YOUR TIP IS:</b> <span id="tipInEuros">0€</span></p>
+            <p><b>YOUR TOTAL BILLING IS:</b> <span id="totalBill">0€</span></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="tip.js"></script>
+  </body>
+</html>
